@@ -1,0 +1,15 @@
+int getDecimalValue(struct ListNode* head) {
+   struct ListNode *link=head;int c=0;int sum=0;
+   while(link!=NULL)
+   {
+    c++;
+    link=link->next;
+   } c--;
+   link=head;
+   while(link!=NULL)
+   {
+     sum=sum+(pow(2,c--)*link->val);
+    link=link->next;
+   }
+   return sum;
+}
