@@ -1,0 +1,21 @@
+struct ListNode* middleNode(struct ListNode* head) {
+    struct ListNode *link1,*link2;
+    link1=head;
+    link2=head;
+
+    while(link2->next!=NULL && link2->next->next!=NULL)
+    {
+       link1=link1->next;
+       link2=link2->next->next;
+    }
+
+    if(link2->next==NULL)
+    return link1;
+
+    else
+    {
+        link1=link1->next;
+        return link1;
+    }
+
+}
